@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Сведения</title>
+  <meta charset="utf-8" />
+  <style>
+    table {
+      font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+      border-collapse: collapse;
+      color: #686461;
+    }
+    caption {
+      padding: 10px;
+      color: white;
+      background: #8FD4C1;
+      font-size: 18px;
+      text-align: left;
+      font-weight: bold;
+    }
+    th {
+      border-bottom: 3px solid #B9B29F;
+      padding: 10px;
+      text-align: left;
+    }
+    td {
+      padding: 10px;
+    }
+    tr:nth-child(odd) {
+      background: white;
+    }
+    tr:nth-child(even) {
+      background: #E8E6D1;
+    }
+  </style>
+</head>
+
+<body>
+<h1>URL документы</h1>
+
+<p><a href="/">Главная страничка</a></p>
+<p><a href="/treetable">Список деревьев</a></p>
+
+
+<p>Здесь показаны все документы из электронных библиотек, найденные по всем веткам и внесенные в таблицу</p>
+<br>
+
+<form action="" method="post" onsubmit="setTimeout(function() { window.location.reload(); }, 1000)">
+  <table>
+    <tr>
+      <th>id дерева</th>
+      <th>id ветки</th>
+      <th>Название дерева</th>
+      <th>Ключевые слова ветки</th>
+      <th>Название статьи</th>
+      <th>Авторы статьи</th>
+      <th>Название журнала</th>
+    </tr>
+    <tr>
+      <th><input type="number" name="treeid" min = "1" /></th>
+      <th><input type="number" name="branchid" min = "1" /></th>
+      <th><input type="text" name="treename"/></th>
+      <th><input type="text" name="keys"/></th>
+      <th><input type="text" name="name"/></th>
+      <th><input type="text" name="auth"/></th>
+      <th><input type="text" name="jour"/></th>
+    </tr>
+    <tr >
+      <td align="center" colspan="7"> <input type="submit" value="Найти" style="font-size : 14px; width: 25%; height: 25px;"/></td>
+    </tr>
+  </table>
+
+</form>
+<br>
+{selectResult}
+
+</body>
+
+</html>
