@@ -1,7 +1,11 @@
 {
-  "name": "antology",
+  "name": "anthology_ui",
   "version": "0.0.0",
   "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "axios": "^0.21.1",
     "cookie-parser": "~1.4.4",
