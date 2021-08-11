@@ -26,7 +26,7 @@ const getTree = async (request, response) => {
     let desc = encodeURIComponent(request.body.desc)
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/anthology?name=${name}&desc=${desc}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/anthology?name=${name}&desc=${desc}`);
         } catch (error) {
             console.error(error)
         }
@@ -66,7 +66,7 @@ const getUrl = async (request, response) => {
 
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/urllist?treename=${treename}&keys=${keys}&name=${name}&auth=${auth}&jour=${jour}${dopt}${tid}${dopb}${bid}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/urllist?treename=${treename}&keys=${keys}&name=${name}&auth=${auth}&jour=${jour}${dopt}${tid}${dopb}${bid}`);
         } catch (error) {
             console.error(error)
         }
@@ -104,7 +104,7 @@ const showTreebyId = async (request, response) => {
     body = "";
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/treebyid?id=${request.params.id}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/treebyid?id=${request.params.id}`);
         } catch (error) {
             console.error(error)
         }
@@ -135,7 +135,7 @@ const showBranchbyId = async (request, response) => {
     body = "";
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/branchbyid?id=${request.params.id}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/branchbyid?id=${request.params.id}`);
         } catch (error) {
             console.error(error)
         }
@@ -163,7 +163,7 @@ const showUrlsbyTreeId = async (request, response) => {
     body = "";
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/urlsbytreeid?id=${request.params.id}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/urlsbytreeid?id=${request.params.id}`);
         } catch (error) {
             console.error(error)
         }
@@ -193,7 +193,7 @@ const showUrlsbyBranchId = async (request, response) => {
     body = "";
     const reqToHost = async () => {
         try {
-            return await axios.get(`http://10.5.0.4:4444/ui/urlsbybranchid?id=${request.params.id}`);
+            return await axios.get(`http://10.7.0.4:4402/ui/urlsbybranchid?id=${request.params.id}`);
         } catch (error) {
             console.error(error)
         }

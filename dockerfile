@@ -4,4 +4,4 @@ COPY package*.json . /app_front/
 RUN npm install
 COPY . . /app_front/
 CMD node server.js
-EXPOSE 4442
+EXPOSE 4401
