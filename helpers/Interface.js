@@ -15,6 +15,7 @@ const showTree = async (request, response) => {
     fs.readFile("./views/tree_table.html", "utf-8", (error, data) => {
 
         data = data.replace("{selectResult}", htmlData_tree);
+        htmlData_tree = "";
         response
             .status(200)
             .end(data);
@@ -45,6 +46,7 @@ const showUrl = async (request, response) => {
     fs.readFile("./views/url_table.html", "utf-8", (error, data) => {
 
         data = data.replace("{selectResult}", htmlData_url);
+        htmlData_url = "";
         response
             .status(200)
             .end(data);
@@ -124,7 +126,7 @@ const showTreebyId = async (request, response) => {
         data = data
                    .replace("{description}", "<p>Данные о дереве, к которому относится данная ветка</p>")
                    .replace("{selectResult}", htmlData_buffer)
-
+        htmlData_buffer = "";
         response
             .status(200)
             .end(data);
@@ -152,7 +154,7 @@ const showBranchbyId = async (request, response) => {
         data = data
             .replace("{description}", "<p>Сведения о ветках, относящихся к дереву</p>")
             .replace("{selectResult}", htmlData_buffer)
-
+        htmlData_buffer = "";
         response
             .status(200)
             .end(data);
@@ -182,7 +184,7 @@ const showUrlsbyTreeId = async (request, response) => {
         data = data
             .replace("{description}", "<p>Список документов, относящихся к дереву</p>")
             .replace("{selectResult}", htmlData_buffer)
-
+        htmlData_buffer = "";
         response
             .status(200)
             .end(data);
@@ -211,7 +213,7 @@ const showUrlsbyBranchId = async (request, response) => {
         data = data
             .replace("{description}", "<p>Список документов, относящихся к дереву</p>")
             .replace("{selectResult}", htmlData_buffer)
-
+        htmlData_buffer = "";
         response
             .status(200)
             .end(data);
