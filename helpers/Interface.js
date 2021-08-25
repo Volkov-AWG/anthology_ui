@@ -98,7 +98,7 @@ const getUrl = async (request, response) => {
         "<th>Ссылка на статью</th>" +
         "<th>Авторы статьи</th>" +
         "<th>Название журнала</th>"+
-        "<th>Ключевые слова ветки</th></tr>" + htmlData_buffer + "</table>";
+        "<th>Ссылка на журнал</th></tr>" + htmlData_buffer + "</table>";
 }
 
 const showTreebyId = async (request, response) => {
